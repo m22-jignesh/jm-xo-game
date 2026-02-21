@@ -1,9 +1,15 @@
 {
-  "name": "JMC XO Game",
-  "short_name": "JMC XO",
+  "name": "JMXO Game",
+  "short_name": "JMXO",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#202124",
   "theme_color": "#202124",
-  "icons": [{ "src": "icon.png", "sizes": "512x512", "type": "image/png" }]
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
 }

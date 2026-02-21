@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JMC XO Game</title>
+    <title>JMXO Game</title>
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#202124">
 </head>
 <body>
     <div class="game-container">
-        <h1>XO Game</h1>
+        <h1>JMXO</h1> 
+        
         <div id="status">Player X's Turn</div>
+        
         <div class="board" id="board">
             <div class="cell" data-index="0"></div>
             <div class="cell" data-index="1"></div>
@@ -23,10 +25,13 @@
             <div class="cell" data-index="7"></div>
             <div class="cell" data-index="8"></div>
         </div>
+        
         <button id="reset-btn">Restart Game</button>
     </div>
+
     <script src="script.js"></script>
     <script>
+        // PWA sathi service worker register kela aahe
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('sw.js');
         }
