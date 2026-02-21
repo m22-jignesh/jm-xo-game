@@ -1,0 +1,38 @@
+body {
+    background-color: #202124;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.game-container { text-align: center; }
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 10px;
+    margin: 20px auto;
+}
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #3c4043;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    cursor: pointer;
+}
+.cell:active { background-color: #5f6368; }
+#status { font-size: 1.5rem; margin-bottom: 10px; color: #8ab4f8; }
+#reset-btn {
+    padding: 10px 20px;
+    background-color: #8ab4f8;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
