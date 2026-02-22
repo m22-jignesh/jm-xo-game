@@ -1,38 +1,77 @@
+:root {
+    --gold: #f9d448;
+    --blue: #5eb5e2;
+    --pink: #ff4081;
+    --bg: #2b78a3;
+}
+
 body {
-    background-color: #202124;
+    background: linear-gradient(180deg, #87ceeb 0%, #2b78a3 100%);
     color: white;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Arial Rounded MT Bold', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    overflow: hidden;
 }
-.game-container { text-align: center; }
+
+.game-container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    border: 4px solid white;
+    width: 90%;
+    max-width: 400px;
+}
+
+.logo-img { width: 180px; margin-bottom: 20px; }
+
+.menu-btn {
+    width: 100%;
+    padding: 15px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px #b8860b;
+    transition: 0.2s;
+}
+
+.main-btn { background: white; color: #2b78a3; }
+.easy { background: #add8e6; color: #2b78a3; }
+.medium { background: var(--gold); color: #856404; }
+.hard { background: #f0ad4e; color: white; }
+.back-btn { background: var(--gold); margin-top: 20px; }
+
+.menu-btn:active { transform: translateY(4px); box-shadow: none; }
+
 .board {
     display: grid;
-    grid-template-columns: repeat(3, 100px);
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-    margin: 20px auto;
+    background: #5d4037; /* Wooden board look */
+    padding: 15px;
+    border-radius: 20px;
+    border: 8px solid #3e2723;
 }
+
 .cell {
-    width: 100px;
-    height: 100px;
-    background-color: #3c4043;
-    border-radius: 10px;
+    aspect-ratio: 1/1;
+    background: #d7ccc8;
+    border-radius: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 3rem;
-    cursor: pointer;
-}
-.cell:active { background-color: #5f6368; }
-#status { font-size: 1.5rem; margin-bottom: 10px; color: #8ab4f8; }
-#reset-btn {
-    padding: 10px 20px;
-    background-color: #8ab4f8;
-    border: none;
-    border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
 }
+
+.cell.x { color: var(--pink); }
+.cell.o { color: var(--blue); }

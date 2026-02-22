@@ -6,32 +6,41 @@
     <title>JMXO Game</title>
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#202124">
+    <meta name="theme-color" content="#5eb5e2">
 </head>
 <body>
     <div class="game-container">
-        <h1>JMXO</h1> 
+        <img src="icon.png" alt="JMXO Logo" class="logo-img">
         
-        <div id="status">Player X's Turn</div>
-        
-        <div class="board" id="board">
-            <div class="cell" data-index="0"></div>
-            <div class="cell" data-index="1"></div>
-            <div class="cell" data-index="2"></div>
-            <div class="cell" data-index="3"></div>
-            <div class="cell" data-index="4"></div>
-            <div class="cell" data-index="5"></div>
-            <div class="cell" data-index="6"></div>
-            <div class="cell" data-index="7"></div>
-            <div class="cell" data-index="8"></div>
+        <div id="menu">
+            <button class="menu-btn main-btn" onclick="setMode('friend')">Play with Friend 👑</button>
+            <p class="menu-label">Play with Bot:</p>
+            <div class="bot-grid">
+                <button class="menu-btn easy" onclick="setMode('easy')">Easy</button>
+                <button class="menu-btn medium" onclick="setMode('medium')">Medium</button>
+                <button class="menu-btn hard" onclick="setMode('hard')">Hard 💰</button>
+            </div>
         </div>
-        
-        <button id="reset-btn">Restart Game</button>
+
+        <div id="game-view" style="display: none;">
+            <div id="status">Your Turn</div>
+            <div class="board" id="board">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+            <button class="menu-btn back-btn" onclick="backToMenu()">Back to Menu</button>
+        </div>
     </div>
 
     <script src="script.js"></script>
     <script>
-        // PWA sathi service worker register kela aahe
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('sw.js');
         }
